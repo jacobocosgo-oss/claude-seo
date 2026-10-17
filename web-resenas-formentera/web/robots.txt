@@ -1,0 +1,6 @@
+# Permite a todos los buscadores leer la web.
+# Sustituye [DOMINIO] por tu dominio real antes de publicar.
+User-agent: *
+Allow: /
+
+Sitemap: https://[DOMINIO]/sitemap.xml

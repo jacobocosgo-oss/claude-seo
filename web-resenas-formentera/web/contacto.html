@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | [NOMBRE DEL SERVICIO]</title>
+  <meta name="description" content="Cuéntanos sobre tu negocio en Formentera y te respondemos sin compromiso. Podemos pasar por tu local.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://[DOMINIO]/contacto.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="[NOMBRE DEL SERVICIO]">
+  <meta property="og:title" content="Contacto | [NOMBRE DEL SERVICIO]">
+  <meta property="og:description" content="Cuéntanos sobre tu negocio en Formentera y te respondemos sin compromiso. Podemos pasar por tu local.">
+  <meta property="og:url" content="https://[DOMINIO]/contacto.html">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="logo" href="index.html"><img src="img/logo.svg" alt="" width="32" height="32"> [NOMBRE DEL SERVICIO]</a>
+      <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav id="menu" class="menu" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios y precios</a></li>
+        <li><a href="tarjeta-nfc.html">Tarjeta NFC</a></li>
+        <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="portada">
+      <div class="contenedor">
+        <h1>Contacto</h1>
+        <p class="entradilla">Cuéntanos un poco sobre tu negocio y te respondemos. Sin compromiso y sin llamadas insistentes.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor rejilla rejilla-2">
+        <div>
+          <form id="form-contacto" class="formulario" action="[ENDPOINT]" method="post" novalidate>
+            <div class="campo">
+              <label for="nombre">Tu nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="campo">
+              <label for="negocio">Nombre del negocio</label>
+              <input id="negocio" name="negocio" type="text" autocomplete="organization" required>
+            </div>
+
+            <div class="campo">
+              <label for="zona">Zona</label>
+              <select id="zona" name="zona" required>
+                <option value="">Elige una zona</option>
+                <option>Sant Francesc</option>
+                <option>La Savina</option>
+                <option>Sant Ferran</option>
+                <option>Es Pujols</option>
+                <option>Es Caló</option>
+                <option>El Pilar de la Mola</option>
+                <option>Migjorn</option>
+                <option>Otra zona</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="contacto">Teléfono o email</label>
+              <input id="contacto" name="contacto" type="text" required>
+              <p class="ayuda">Lo que te vaya mejor. Solo lo usaremos para responderte.</p>
+            </div>
+
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" required placeholder="Por ejemplo: tengo un bar en Es Pujols y no me da la vida para responder las reseñas."></textarea>
+            </div>
+
+            <div class="casilla">
+              <input id="privacidad" name="privacidad" type="checkbox" value="acepto" required>
+              <label for="privacidad">He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</label>
+            </div>
+
+            <p class="ayuda"><span class="revisar">[REVISAR]</span> <strong>Información básica sobre protección de datos.</strong> Responsable: [NOMBRE O RAZÓN SOCIAL]. Finalidad: responder a tu consulta. Legitimación: tu consentimiento. No se cederán datos a terceros salvo obligación legal [REVISAR si el servicio de formularios es un tercero]. Puedes ejercer tus derechos de acceso, rectificación, supresión y otros escribiendo a [EMAIL DE CONTACTO]. Más información en la <a href="privacidad.html">política de privacidad</a>.</p>
+
+            <div>
+              <button class="boton" type="submit">Enviar mensaje</button>
+            </div>
+          </form>
+
+          <div id="confirmacion" class="confirmacion" tabindex="-1" role="status" hidden>
+            <h2>¡Gracias! Hemos recibido tu mensaje.</h2>
+            <p>Te responderemos en [PLAZO DE RESPUESTA, por ejemplo: 1 o 2 días laborables]. <span class="revisar">[REVISAR]</span></p>
+            <p><a href="index.html">Volver al inicio</a></p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="tarjeta">
+            <h2>¿Prefieres hablar directamente?</h2>
+            <ul>
+              <li>Teléfono: [TELÉFONO]</li>
+              <li>WhatsApp: [WHATSAPP]</li>
+              <li>Email: [EMAIL DE CONTACTO]</li>
+            </ul>
+            <p>Horario de atención: [HORARIO]. <span class="revisar">[REVISAR]</span></p>
+            <p>También podemos pasar por tu local, en cualquier zona de Formentera.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="rejilla">
+        <div>
+          <h2>[NOMBRE DEL SERVICIO]</h2>
+          <p>Perfil de Google y reseñas para negocios de Formentera.</p>
+          <p>[TELÉFONO] · [EMAIL DE CONTACTO]</p>
+        </div>
+        <div>
+          <h2>Zonas</h2>
+          <ul>
+            <li><a href="formentera-sant-francesc.html">Sant Francesc</a></li>
+            <li><a href="formentera-la-savina.html">La Savina</a></li>
+            <li><a href="formentera-el-pilar-de-la-mola.html">El Pilar de la Mola</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Información legal</h2>
+          <ul>
+            <li><a href="aviso-legal.html">Aviso legal</a></li>
+            <li><a href="privacidad.html">Política de privacidad</a></li>
+            <li><a href="cookies.html">Política de cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>Google es una marca de Google LLC. [NOMBRE DEL SERVICIO] es un servicio independiente y no tiene relación oficial con Google.</p>
+    </div>
+  </footer>
+
+  <script src="js/menu.js" defer></script>
+  <script src="js/contacto.js" defer></script>
+</body>
+</html>

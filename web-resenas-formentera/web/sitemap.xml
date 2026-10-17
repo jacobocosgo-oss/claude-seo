@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sustituye [DOMINIO] por tu dominio real antes de publicar. Actualiza lastmod cuando cambies una página. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://[DOMINIO]/</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMINIO]/servicios.html</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMINIO]/tarjeta-nfc.html</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMINIO]/preguntas-frecuentes.html</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMINIO]/contacto.html</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMINIO]/formentera-sant-francesc.html</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMINIO]/formentera-la-savina.html</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://[DOMINIO]/formentera-el-pilar-de-la-mola.html</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+</urlset>

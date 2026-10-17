@@ -1,0 +1,308 @@
+/* ==========================================================
+   Estilos de la web. Diseño móvil primero.
+   Para cambiar los colores, edita solo las variables de :root.
+   ========================================================== */
+
+:root {
+  --mar: #0f4c5c;        /* azul mar: títulos y botones */
+  --mar-oscuro: #0a3540;
+  --turquesa: #2a9d8f;   /* acentos */
+  --arena: #f6f1e7;      /* fondos suaves */
+  --texto: #1f2a30;
+  --texto-suave: #55636b;
+  --borde: #dcd5c6;
+  --blanco: #ffffff;
+  --aviso: #fff4d6;      /* fondo de las marcas [REVISAR] */
+  --radio: 12px;
+  --ancho: 1080px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--blanco);
+}
+
+img, svg { max-width: 100%; height: auto; }
+
+a { color: var(--mar); }
+a:hover { color: var(--turquesa); }
+
+h1, h2, h3 { line-height: 1.25; color: var(--mar-oscuro); }
+h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
+h2 { font-size: 1.5rem; margin: 2rem 0 .75rem; }
+h3 { font-size: 1.15rem; margin: 1.25rem 0 .5rem; }
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.saltar {
+  position: absolute;
+  left: -9999px;
+}
+.saltar:focus {
+  left: 16px;
+  top: 8px;
+  background: var(--blanco);
+  padding: .5rem 1rem;
+  z-index: 100;
+}
+
+/* ---------- Cabecera y menú ---------- */
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--blanco);
+  border-bottom: 1px solid var(--borde);
+}
+
+.cabecera .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  color: var(--mar-oscuro);
+  text-decoration: none;
+}
+.logo img { width: 32px; height: 32px; }
+
+.boton-menu {
+  background: none;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: .5rem .75rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: var(--blanco);
+  border-bottom: 1px solid var(--borde);
+  padding: .5rem 16px 1rem;
+}
+.menu.abierto { display: block; }
+.menu ul { list-style: none; margin: 0; padding: 0; }
+.menu a {
+  display: block;
+  padding: .65rem 0;
+  text-decoration: none;
+  color: var(--texto);
+}
+.menu a[aria-current="page"] { color: var(--mar); font-weight: 700; }
+
+/* ---------- Bloques ---------- */
+
+.portada {
+  background: var(--arena);
+  padding: 2.5rem 0 3rem;
+}
+.portada p.entradilla {
+  font-size: 1.15rem;
+  color: var(--texto-suave);
+  max-width: 40rem;
+}
+
+.seccion { padding: 2rem 0; }
+.seccion-arena { background: var(--arena); }
+
+.boton {
+  display: inline-block;
+  background: var(--mar);
+  color: var(--blanco);
+  padding: .85rem 1.4rem;
+  border-radius: var(--radio);
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.boton:hover { background: var(--mar-oscuro); color: var(--blanco); }
+
+.boton-secundario {
+  background: transparent;
+  color: var(--mar);
+  border: 2px solid var(--mar);
+}
+.boton-secundario:hover { background: var(--mar); color: var(--blanco); }
+
+.botones { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+
+.rejilla { display: grid; gap: 1rem; }
+
+.tarjeta {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.25rem;
+}
+.tarjeta h2,
+.tarjeta h3 { margin-top: 0; }
+
+.pasos { list-style: none; padding: 0; margin: 0; counter-reset: paso; }
+.pasos li {
+  counter-increment: paso;
+  position: relative;
+  padding-left: 3.25rem;
+  margin-bottom: 1.25rem;
+}
+.pasos li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: var(--turquesa);
+  color: var(--blanco);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.lista-check { list-style: none; padding: 0; }
+.lista-check li { padding-left: 1.6rem; position: relative; margin-bottom: .4rem; }
+.lista-check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--turquesa);
+  font-weight: 700;
+}
+
+.nota {
+  background: var(--arena);
+  border-left: 4px solid var(--turquesa);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radio) var(--radio) 0;
+}
+
+/* Marca visual para textos provisionales */
+.revisar {
+  background: var(--aviso);
+  padding: 0 .25rem;
+  border-radius: 4px;
+}
+
+/* ---------- Planes y precios ---------- */
+
+.plan { display: flex; flex-direction: column; }
+.plan .precio {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--mar);
+  margin: .25rem 0;
+}
+.plan .precio small { font-size: 1rem; font-weight: 400; color: var(--texto-suave); }
+.plan .boton { margin-top: auto; text-align: center; }
+.plan-destacado { border: 2px solid var(--mar); }
+
+/* ---------- Preguntas frecuentes ---------- */
+
+.faq details {
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  margin-bottom: .75rem;
+  background: var(--blanco);
+}
+.faq summary {
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; float: right; font-size: 1.3rem; line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq details > div { padding: 0 1.25rem 1rem; }
+
+/* ---------- Formulario ---------- */
+
+.formulario { display: grid; gap: 1rem; max-width: 36rem; }
+.campo label { display: block; font-weight: 600; margin-bottom: .3rem; }
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: .75rem;
+  font: inherit;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--blanco);
+}
+.campo textarea { min-height: 8rem; resize: vertical; }
+.campo .ayuda { font-size: .9rem; color: var(--texto-suave); margin: .25rem 0 0; }
+.casilla { display: flex; gap: .6rem; align-items: flex-start; }
+.casilla input { margin-top: .35rem; width: 1.1rem; height: 1.1rem; }
+.error { color: #b42318; font-size: .92rem; margin: .25rem 0 0; }
+.confirmacion {
+  background: #e7f6ef;
+  border: 1px solid #9ad3b8;
+  border-radius: var(--radio);
+  padding: 1.25rem;
+}
+
+/* ---------- Pie ---------- */
+
+.pie {
+  background: var(--mar-oscuro);
+  color: #d9e6e9;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  font-size: .95rem;
+}
+.pie a { color: #ffffff; }
+.pie ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.pie li { margin-bottom: .35rem; }
+.pie .rejilla { gap: 1.5rem; }
+.pie h2 { color: #ffffff; font-size: 1rem; margin: 0 0 .5rem; }
+
+/* ---------- Pantallas más grandes ---------- */
+
+@media (min-width: 720px) {
+  h1 { font-size: 2.5rem; }
+  .rejilla-2 { grid-template-columns: repeat(2, 1fr); }
+  .rejilla-3 { grid-template-columns: repeat(3, 1fr); }
+  .pie .rejilla { grid-template-columns: repeat(3, 1fr); }
+  .portada { padding: 4rem 0; }
+}
+
+@media (min-width: 900px) {
+  .boton-menu { display: none; }
+  .menu {
+    display: block;
+    position: static;
+    border: 0;
+    padding: 0;
+  }
+  .menu ul { display: flex; gap: 1.25rem; }
+  .menu a { padding: .25rem 0; }
+}
